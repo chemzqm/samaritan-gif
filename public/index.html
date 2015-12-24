@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width, height=device-height"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="keywords" content="samaritan gif" />
+  <link rel="icon" href="/favicon.ico"/>
+  <title>Samaritan gif</title>
+  <link rel="stylesheet" href="./css/kube.css" type="text/css" media="all">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
+</head>
+<body>
+  <h1>Samaritan gif generate</h1>
+  <div class="container">
+    <p>
+      Samaritan is smart, but <em>Chinese</em> is too hard.
+    </p>
+    <form method="get" action="/generate" class="forms" id="form">
+      <section>
+        <label>Text <span class="desc">english words</span></label>
+        <input type="text" name="text" class="width-12" value="MERRY CHRISTMIS" />
+      </section>
+      <section>
+        <label>Font size <span class="desc">font-size for text</span></label>
+        <input type="number" name="fontSize" class="width-12" value="14" />
+      </section>
+      <section>
+        <label>Color <span class="desc">text color</span></label>
+        <input type="color" name="color" class="width-12" value="#322d3d"/>
+      </section>
+      <section>
+        <label>Background color</label>
+        <input type="color" name="background" class="width-12" value="#ffffff"/>
+      </section>
+      <section>
+        <label>Width <span class="desc">canvas width</span></label>
+        <input type="number" name="width" class="width-12" value="120"/>
+      </section>
+      <section>
+        <label>Height <span class="desc">canvas height</span></label>
+        <input type="number" name="height" class="width-12" value="120"/>
+      </section>
+      <section>
+        <button type="primary" id="submit">Generate</button>
+      </section>
+    </form>
+    <div class="loading">
+    </div>
+    <div id="result">
+      <img src="" alt="">
+    </div>
+  </div>
+  <footer>
+      <div class="center">
+        Made by <a href="http://chemzqm.me">chemzqm</a>, hosted at <a href="https://www.digitalocean.com/?refcode=30441c8082e8" target="_blank">DigitalOcean</a>
+      </div>
+  </footer>
+  <script src="./build/bundle.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

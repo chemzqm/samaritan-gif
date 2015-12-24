@@ -1,0 +1,30 @@
+{
+  "name": "samaritan",
+  "version": "1.0.0",
+  "description": "samaritan works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "samaritan"
+  ],
+  "author": "chemzqm@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^1.3.5",
+    "component-notice": "0.0.15",
+    "install": "^0.4.1",
+    "koa": "^1.1.2",
+    "koa-static": "^1.5.2",
+    "loadings": "0.0.3",
+    "node-parallel": "^0.1.5",
+    "npm": "^3.5.2",
+    "request-component": "0.0.1",
+    "tmp": "0.0.28",
+    "uid": "0.0.2"
+  },
+  "browser": {
+    "notice": "component-notice"
+  }
+}

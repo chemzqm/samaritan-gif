@@ -1,8 +1,8 @@
 var request = require('request-component')
 var Notice = require('notice')
-var wander = require('loadings/lib/wander')
+var Wander = require('loadings/lib/wander')
 var loading = document.querySelector('.loading')
-wander(loading)
+var wander
 
 var fields = ['width', 'height', 'text', 'color', 'background', 'fontSize']
 
@@ -22,6 +22,11 @@ form.addEventListener('submit', function (e) {
   }
   btn.disabled = true
   loading.style.display = 'block'
+  if (!wander) {
+    wander = Wander(loading, {
+      color: '#EC1F00'
+    })
+  }
   request.get(form.action, data, function (err, res) {
     btn.disabled = false
     loading.style.display = 'none'
@@ -37,7 +42,6 @@ form.addEventListener('submit', function (e) {
 }, false)
 
 function checkParams(query) {
-console.log(query)
   for (var i = 0, l = fields.length; i < l; i++) {
     var name = fields[i]
     if (!query[name]) return name  + ' is required'

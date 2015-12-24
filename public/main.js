@@ -29,6 +29,7 @@ form.addEventListener('submit', function (e) {
   }
   request.get(form.action, data, function (err, res) {
     btn.disabled = false
+    document.getElementById('share').style.display = 'block'
     loading.style.display = 'none'
     if (err) return Notice(err.message, { type: 'error' })
     if (res.status !== 200) return Notice('request error status:' + res.status, {type: 'error'})

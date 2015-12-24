@@ -4,12 +4,7 @@ var path = require('path')
 var root = path.resolve(__dirname, 'public')
 var generate = require('./lib/generate')
 app.use(require('koa-static')(root))
-//var fs = require('fs')
-//var config = JSON.parse(fs.readFileSync('./config.json'))
-//generate(config, function (err, dest) {
-//  if (err) throw err
-//  console.log(dest)
-//})
+
 function genPromise(query) {
   return promise = new Promise(function (resolve, reject) {
     var o = {}

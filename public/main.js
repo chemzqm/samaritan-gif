@@ -6,6 +6,7 @@ var wander
 
 var fields = ['width', 'height', 'text', 'color', 'background', 'fontSize']
 
+var ratio = window.devicePixelRatio
 var btn = document.getElementById('submit')
 var form = document.getElementById('form')
 form.addEventListener('submit', function (e) {
@@ -20,6 +21,11 @@ form.addEventListener('submit', function (e) {
     Notice(msg, { type: 'error' })
     return
   }
+  data.width = data.width * ratio
+2
+  data.height = data.height * ratio
+  data.fontSize = data.fontSize * 2
+
   btn.disabled = true
   loading.style.display = 'block'
   if (!wander) {
@@ -36,6 +42,8 @@ form.addEventListener('submit', function (e) {
       document.getElementById('share').style.display = 'block'
       loading.style.display = 'none'
     }
+    img.width = data.width/ratio
+    img.height = data.height/ratio
     img.src = JSON.parse(res.text).dest
     var result = document.getElementById('result')
     result.innerHTML = ''

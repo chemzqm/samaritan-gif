@@ -29,11 +29,13 @@ form.addEventListener('submit', function (e) {
   }
   request.get(form.action, data, function (err, res) {
     btn.disabled = false
-    document.getElementById('share').style.display = 'block'
-    loading.style.display = 'none'
     if (err) return Notice(err.message, { type: 'error' })
     if (res.status !== 200) return Notice('request error status:' + res.status, {type: 'error'})
     var img = document.createElement('img')
+    img.onload = function () {
+      document.getElementById('share').style.display = 'block'
+      loading.style.display = 'none'
+    }
     img.src = JSON.parse(res.text).dest
     var result = document.getElementById('result')
     result.innerHTML = ''

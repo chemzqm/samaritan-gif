@@ -50,7 +50,7 @@ app.use(function * () {
       encoding: this.charset
       })
     }
-    yield this.recordRequest(o)
+    yield recordRequest(o)
   } else if (this.path == '/generate' && this.method == 'GET') {
     var msg = checkParams(this.query)
     if (msg) {
@@ -64,7 +64,7 @@ app.use(function * () {
 })
 
 function recordRequest(o) {
-  return Promise(function (resolve, reject) {
+  return new Promise(function (resolve, reject) {
     fs.writeFile('/home/chemzqm/return.txt', JSON.stringify(o), 'utf8', function (err) {
       if (err) return reject(err)
       resolve()

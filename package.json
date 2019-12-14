@@ -19,7 +19,7 @@
     "koa-static": "^1.5.2",
     "loadings": "0.0.3",
     "node-parallel": "^0.1.5",
-    "npm": "^3.5.2",
+    "npm": "^6.13.4",
     "raw-body": "^2.1.6",
     "request-component": "0.0.1",
     "tmp": "0.0.28",
